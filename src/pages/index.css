@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.section {
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.section.static {
+  background-color: lightblue;
+  border-color: darkblue;
+}
+
+.section.dynamic {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: lightpink;
+  border-color: darkorchid;
+}
+
+.section + .section {
+  margin-top: 1rem;
+}
